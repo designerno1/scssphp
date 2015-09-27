@@ -1,19 +1,95 @@
-/* line 1, inputs/at_root.scss */
-.first {
-  color: red; }
-/* line 4, inputs/at_root.scss */
-/* line 5, inputs/at_root.scss */
-  body .second {
-    color: white;
+/* line 1, tests/inputs/at_root.scss */
+.parent-inline-selector {
+  color: white; }
+  /* line 3, tests/inputs/at_root.scss */
+  .child {
     color: black; }
 
-/* line 9, inputs/at_root.scss */
-.nested1 {
-color: blue;
-color: orange; }
-/* line 12, inputs/at_root.scss */
-.nested2 {
-color: yellow; }
-/* line 22, inputs/at_root.scss */
+/* line 6, tests/inputs/at_root.scss */
+.parent-block {
+  color: white; }
+  /* line 9, tests/inputs/at_root.scss */
+  .child1 {
+    color: green; }
+
+  /* line 10, tests/inputs/at_root.scss */
+  .child2 {
+    color: blue; }
+  /* line 12, tests/inputs/at_root.scss */
+  .parent-block .step-child {
+    color: black; }
+
+/* line 15, tests/inputs/at_root.scss */
+.first {
+  color: red; }
+
+/* line 19, tests/inputs/at_root.scss */
+body .second {
+  color: white;
+  color: black; }
+  /* line 23, tests/inputs/at_root.scss */
+  .nested1 {
+    color: blue;
+    color: orange; }
+    /* line 26, tests/inputs/at_root.scss */
+    .nested2 {
+      color: yellow; }
+
+/* line 36, tests/inputs/at_root.scss */
 .third {
   color: green; }
+
+@media print {
+  /* line 41, tests/inputs/at_root.scss */
+  .page {
+    width: 8in; } }
+  /* line 41, tests/inputs/at_root.scss */
+  .page {
+    color: red; }
+
+@media (min-width: 300px) {
+  /* line 51, tests/inputs/at_root.scss */
+  .my-widget .inside-mq {
+    inside-style: mq; } }
+/* line 56, tests/inputs/at_root.scss */
+.my-widget .outside-mq {
+  outside-style: mq; }
+/* line 63, tests/inputs/at_root.scss */
+.outside-class {
+  color: blue; }
+@media (min-width: 300px) {
+  /* line 71, tests/inputs/at_root.scss */
+  .with-only {
+    color: pink; } }
+
+@media screen and (max-width: 320px) {
+  /* line 81, tests/inputs/at_root.scss */
+  .foo {
+    margin: 0; }
+    /* line 85, tests/inputs/at_root.scss */
+    .bar {
+      padding: 0; } }
+  /* line 90, tests/inputs/at_root.scss */
+  .foo .baar {
+    padding: 0; }
+  /* line 95, tests/inputs/at_root.scss */
+  .foo .barr {
+    padding: 0; }
+
+/* line 107, tests/inputs/at_root.scss */
+.foo .bar {
+  width: 0; }
+@supports (display: flex) {
+  /* line 112, tests/inputs/at_root.scss */
+  .baz {
+    height: 0; } }
+@media screen and (max-width: 320px) {
+  /* line 117, tests/inputs/at_root.scss */
+  .qux {
+    margin: 0; }
+  /* line 122, tests/inputs/at_root.scss */
+  .foo .quux {
+    padding: 0; } }
+/* line 127, tests/inputs/at_root.scss */
+.foo .quix {
+  padding: 0; }
